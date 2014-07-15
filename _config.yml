@@ -1,0 +1,25 @@
+markdown:         rdiscount
+highlighter:     pygments    
+paginate:         4
+
+
+
+title:            D大调较交响乐
+url:              https://github.com/sharonlx
+baseUrl:           /gitblog
+feed:             /atom.xml
+description:      "年年不忘必有回响"
+github_username: sharonlx
+author:
+    name:         sharonlx
+    email:        ixuan.lee@gmail.com
+    description:      "年年不忘必有回响"
+
+about: 			  ""
+follow:
+    github:       https://github.com/sharonlx
+
+
+style: 			  /css/style.css
+blogDesc: 年年不忘必有回响
+blogName: D大调交响乐
