@@ -48,7 +48,7 @@ body .fn-hide               { display:none; }
 /*--------------------------------------------
                 default
 --------------------------------------------*/
-body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
+body                        { background: url(/gitblog/images/body-bg.jpg) repeat 0 0; }
 ::selection                 { background:#292929; color:#ffffff; text-shadow:none !important; }
 *::-moz-selection           { background: none repeat scroll 0 0 #292929; color: #FFFFFF; }
 
@@ -56,7 +56,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
                 layout
 --------------------------------------------*/
 /** head **/
-.head                       { padding: 5px 0 4px 0; height: 71px; width: 100%; background: #36393e url(/images/bg.png) repeat 0 0; box-shadow: 2px 2px 4px #ababab; }
+.head                       { padding: 5px 0 4px 0; height: 71px; width: 100%; background: #36393e url(/gitblog/images/bg.png) repeat 0 0; box-shadow: 2px 2px 4px #ababab; }
 .header                     { border-top: 1px dashed #a0a0a0; border-bottom: 1px dashed #aaa; height: 69px; }
 .header-cnt                 { width: 900px; height: 54px; padding-top: 15px; margin: 0 auto; position: relative; }
 .header-cnt .logo           { padding: 4px 4px; height: 80px; background: #2f3133; border-radius: 0 0 14px 14px; position: absolute; top: -5px; left: 0; text-align: center; box-shadow: -1px -1px 2px #333 inset; box-shadow: 0px 0px 5px #272c32; }
@@ -97,7 +97,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .content-cnt .main-excerpt .more a
                             { color: #484848; }
 .content-cnt .aside         { float: left; width: 249px; height: auto; color: #d8d8d8; }
-.content-cnt .aside .box    { padding: 20px 10px; margin: 10px 0 20px 0; background: url(/images/bg.png) repeat 0 0; box-shadow: 1px 2px 4px #000 inset; border-radius: 8px 8px; height: auto; }
+.content-cnt .aside .box    { padding: 20px 10px; margin: 10px 0 20px 0; background: url(/gitblog/images/bg.png) repeat 0 0; box-shadow: 1px 2px 4px #000 inset; border-radius: 8px 8px; height: auto; }
 .content-cnt .aside .box img 
                             { width: 230px; height: 230px; }
 .content-cnt .aside .box p  { line-height: 20px; padding-top: 10px; } 
@@ -112,7 +112,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 
 /** foot **/
 .foot                       { width: 100%; padding: 4px 0 10px 0; background: #202020; box-shadow: 0px -1px 8px #888; }
-.foot-cnt                   { width: 100%; height: auto; border-top: 1px dashed #aaaaaa; border-bottom: 1px dashed #aaaaaa; background: url(/images/bg.png) repeat 0 0; }
+.foot-cnt                   { width: 100%; height: auto; border-top: 1px dashed #aaaaaa; border-bottom: 1px dashed #aaaaaa; background: url(/gitblog/images/bg.png) repeat 0 0; }
 .foot-cnt-det               { width: 900px; margin: 0 auto; }
 .foot-cnt-det .title        { font-size:  14px; color: #eee; border-bottom: 1px double #555555; margin-bottom: 10px; }
 .foot-cnt-det .blogroll     { float:  left; margin-right: 40px; width: 230px; height: auto; padding: 10px 0 20px 0px; }
@@ -136,14 +136,14 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .foot-btn-det .author       { float: right; }
 
 /** follow ico **/
-.foot-cnt-det .ico-google   { background: url(/images/google_32.png) no-repeat 0 0; }
-.foot-cnt-det .ico-rss      { background: url(/images/rss_32.png) no-repeat 0 0; }
-.foot-cnt-det .ico-flickr   { background: url(/images/flickr_32.png) no-repeat 0 0; }
-.foot-cnt-det .ico-twitter  { background: url(/images/twitter_32.png) no-repeat 0 0; }
-.foot-cnt-det .ico-facebook { background: url(/images/facebook_32.png) no-repeat 0 0; }
-.foot-cnt-det .ico-vimeo    { background: url(/images/vimeo_32.png) no-repeat 0 0; }
-.foot-cnt-det .ico-github   { background: url(/images/github_32.png) no-repeat 0 0; }
-.foot-cnt-det .ico-linkedin { background: url(/images/linkedin_32.png) no-repeat 0 0; }
+.foot-cnt-det .ico-google   { background: url(/gitblog/images/google_32.png) no-repeat 0 0; }
+.foot-cnt-det .ico-rss      { background: url(/gitblog/images/rss_32.png) no-repeat 0 0; }
+.foot-cnt-det .ico-flickr   { background: url(/gitblog/images/flickr_32.png) no-repeat 0 0; }
+.foot-cnt-det .ico-twitter  { background: url(/gitblog/images/twitter_32.png) no-repeat 0 0; }
+.foot-cnt-det .ico-facebook { background: url(/gitblog/images/facebook_32.png) no-repeat 0 0; }
+.foot-cnt-det .ico-vimeo    { background: url(/gitblog/images/vimeo_32.png) no-repeat 0 0; }
+.foot-cnt-det .ico-github   { background: url(/gitblog/images/github_32.png) no-repeat 0 0; }
+.foot-cnt-det .ico-linkedin { background: url(/gitblog/images/linkedin_32.png) no-repeat 0 0; }
 
 /*--------------------------------------------
                 page
@@ -217,7 +217,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 --------------------------------------------*/
 .page-title                 { font-size:  26px; font-family: Georgia; color: #454545; border-bottom: 1px dashed #a8a8a8; }
 .archives                   { padding: 10px 0; }
-.article-box                { float: left; margin: 20px 10px 0 10px; width: 205px; height: 280px; background: #36393e url(/images/bg.png) repeat 0 0; box-shadow: 1px 1px 4px #a8a8a8; border-radius: 5px 5px; }
+.article-box                { float: left; margin: 20px 10px 0 10px; width: 205px; height: 280px; background: #36393e url(/gitblog/images/bg.png) repeat 0 0; box-shadow: 1px 1px 4px #a8a8a8; border-radius: 5px 5px; }
 .article-box:hover          { background: #2b2b2b; box-shadow: 1px 1px 4px #898989; }
 .article-box p              { padding: 10px 10px 0 10px; font-size: 12px; color: #e8e8e8; }
 .article-box p a            { border-bottom: 1px dotted #686868; color: #a9a9a9; }
