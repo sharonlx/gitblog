@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    **
+    *
+    * Author:         PIZn
+    * Contact:        pizner@gmail.com
+    * Theme Name:     Block Rude
+    * Version:        1.0
+    *
+    **
+  -->
+  <meta charset="utf-8" />
+  <title>Image对象 | D大调较交响乐</title>
+  <meta name="generator" content="Jekyll" />
+  <meta name="author" content="sharonlx" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <header class="head">
+	<div class="header fn-clear">
+		<section class="header-cnt fn-clear">
+			<div class="logo">
+				<div class="logo-cnt">
+				 	<h1><a href="/">D大调交响乐</a></h1>
+				 	<h2>年年不忘必有回响</h2>
+				</div>
+			</div>
+			<nav class="nav">
+				<ul>
+					<li><a href="/" >首页</a></li>
+					<li><a href="/archives.html" >归档</a></li>
+					<li><a href="/contact.html" >关于</a></li>
+					<li><a href="/atom.xml" target="_blank" >订阅</a></li>
+				</ul>
+			</nav>
+		</section>
+	</div>
+</header> 
+  <section id="content">
+    <article id="contenter">
+      <section class="content">
+	<div class="content-cnt fn-clear">
+		<div class="main fn-clear">
+			<article class="entry">
+				<h1 class="title">Image对象</h1>
+               	<p class="meta"><time class="date" pubdate="2014-06-17">17 Jun 2014</time> By <a href="/contact.html" class="author" title="author">sharonlx</a><g:plusone size="small"></g:plusone></p>
+               	<p class="description"></p>
+ 			 	<h3>new Image() 的用法</h3>
+
+<p>参考<a href="http://blog.csdn.net/hdchangchang/article/details/9036511">js的 new image()</a></p>
+
+<p>Image对象是HTML DOM 自带的对象，主要的作用是可以再浏览器缓存一张图片,使用方法如下：</p>
+
+<pre><code>    new Image(width, height); //width是指图片的宽度,height 是指图片的高度
+</code></pre>
+
+<p>图片对象具有的属性如下：</p>
+
+<ul>
+<li>border:number,图片的边框</li>
+<li>align:left|right|top|middle|bottom 对齐方式</li>
+<li>alt:string 替代文本</li>
+<li>complete:boolean 当前img对象是否加载完成</li>
+<li>src:string 当前img的源</li>
+<li>hspace:pixels 图片的水平留白</li>
+<li>vspace:pixels 图片的垂直留白</li>
+<li>className: 样式名字</li>
+<li>title: img的title</li>
+</ul>
+
+
+<p>图片对象具有的事件如下：</p>
+
+<ul>
+<li>onload: 当图像装载完毕时调用的方法，此时complete为true</li>
+<li>onabort: 用户放弃图像装载时调用的方法，此时complete为true</li>
+<li><p>onerror: 在装载对象发生错误时调用的方法， 此时complete为true</p>
+
+<pre><code>  var img=new Image();
+  img.border = '3';
+  img.hspace = '50';
+  img.vspace = '50';      
+  img.onload=function(){alert("img is loaded")};
+  img.onerror=function(){alert("error!")};
+  img.src="http://source.qunar.com/site/images/wns/20140530_qunar_homepage_logo_100x70_4185.jpg";
+  function show(){alert("body is loaded");};
+  window.onload=show;
+</code></pre></li>
+</ul>
+
+
+<p>由于浏览器会在创建的img对象complete后才出发window的onload，尽量避免在页面中创建大量的image对象。参考文章中提到，IE是先onload，后加载，经过测试好像所有浏览器都是先加载图片，然后onload。</p>
+
+                <nav class="pagination-link">
+                    
+                    <a class="prev" href="/2014/06/17/clientHeight-height-offsetHeight.html" rel="bookmark">&laquo;&nbsp;Clientheight Height Offsetheight</a>
+                    
+                    
+                    <a class="next" href="/html/2014/06/25/html-dom-nodetype-nodename-nodevalue.html" rel="bookmark">nodeType和nodeValue &nbsp;&raquo;</a>
+                    
+                 </nav>
+			</article><!-- .entry -->		
+		</div>
+		<div class="aside fn-clear">
+			<div class="box fn-clear">
+	<img src="/images/psb.jpg" alt="about theme"/>
+	<p></p>
+</div>
+		</div>
+	</div>
+</section>
+    </article>
+  </section>
+    <footer class="foot">
+	<div class="foot-cnt fn-clear">
+		<div class="foot-cnt-det fn-clear">
+			<article class="blogroll">
+				<h4 class="title">友情链接</h4>
+				<!-- <ul>
+					<li>&#8227;<a href="http://github.com/sharonlx">www.pizn.me</a></li>
+					<li>&#8227;<a href="http://www.pizn.net">www.pizn.net</a></li>
+					<li>&#8227;<a href="http://www.jekyllrb.com">www.jekyllrb.com</a></li>
+				</ul> -->
+			</article>
+			<article class="about">
+				<h4 class="title">关于我</h4>
+				<p></p>
+			</article>
+			<article class="follow">
+				<h4 class="title">关注</h4>
+				<ul>
+					<li><a href="https://github.com/sharonlx" class="ico-github" target="_blank">github</a></li>
+					<li><a href="/atom.xml" class="ico-rss" target="_blank">rss</a></li>
+					<!-- <li><a href="#" class="ico-linkedin">linkedin</a></li> -->
+					<li><a href="mailto:ixuan.lee@gmail.com" class="ico-google">google</a></li>
+					<!-- <li><a href="#" class="ico-flickr">flickr</a></li> -->
+					<!-- <li><a href="" class="ico-twitter">twitter</a></li> -->
+					<!-- <li><a href="#" class="ico-facebook">facebook</a></li> -->
+					<!-- <li><a href="#" class="ico-vimeo">vimeo</a></li> -->
+				</ul>
+			</article>
+		</div>
+	</div>
+	<div class="foot-btn">
+		<div class="foot-btn-det">
+			<p class="copyright">Copyright © 2011–2012 PIZn All rights reserved.</p>
+			<p class="author">Powered by <a href="http://www.jekyllrb.com">Jekyll</a>. Design by <a href="http://www.pizn.net">PIZn</a>.</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

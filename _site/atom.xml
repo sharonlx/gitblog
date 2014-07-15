@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+   <title>D大调较交响乐</title>
+   <link href="https://github.com/sharonlx/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="https://github.com/sharonlx" rel="alternate" type="text/html" />
+   <updated>2014-07-15T19:41:08+08:00</updated>
+   <id>https://github.com/sharonlx</id>
+   <author>
+     <name>sharonlx</name>
+     <email>ixuan.lee@gmail.com</email>
+   </author>
+
+   
+   <entry>
+     <title>Javascript strict</title>
+     <link href="https://github.com/sharonlx/javascript/ecma/2014/07/16/strict.html"/>
+     <updated>2014-07-16T00:51:57+08:00</updated>
+     <id>https://github.com/sharonlx/javascript/ecma/2014/07/16/strict</id>
+     <content type="html">&lt;h3&gt;严格模式(use strict)&lt;/h3&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Iterm2和zsh</title>
+     <link href="https://github.com/sharonlx/mac/iterm2/2014/06/25/mac-item2-zsh-and-ohmyzsh.html"/>
+     <updated>2014-06-25T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/mac/iterm2/2014/06/25/mac-item2-zsh-and-ohmyzsh</id>
+     <content type="html">&lt;h3&gt;Mac Item2 配置zsh 和 oh my zsh&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh#readme&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;我是采用的自己clone方式安装的，因为没有wget，呜呜呜&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;clone git 地址&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;拷贝oh-my-zsh中的template来创建新的.zshrc文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置默认的shell，有/bin/sh 修改为/bin/zsh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; chsh -s /bin/zsh
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重启shell&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;就可以了。。。。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PS，以后的需要在iterm2中使用的环境变量，需要在~/.zshrc中设置，而不是/etc/.bashrc了&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+   </entry>
+   
+   <entry>
+     <title>nodeType和nodeValue </title>
+     <link href="https://github.com/sharonlx/html/2014/06/25/html-dom-nodetype-nodename-nodevalue.html"/>
+     <updated>2014-06-25T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/html/2014/06/25/html-dom-nodetype-nodename-nodevalue</id>
+     <content type="html">&lt;h3&gt;HTML DOM 节点的nodeType nodeName nodeValue&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/leexuanr/w5XwH/5/&quot;&gt;代码&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;nodeName 属性含有某个节点的名称&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;节点类型&lt;/th&gt;
+&lt;th&gt; nodeName值 &lt;/th&gt;
+&lt;th&gt; 示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;元素节点&lt;/td&gt;
+&lt;td&gt; 元素的标签名称 &lt;/td&gt;
+&lt;td&gt; DIV&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;属性节点&lt;/td&gt;
+&lt;td&gt; 属性的名称 &lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文本节点&lt;/td&gt;
+&lt;td&gt; #text &lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;注释节点&lt;/td&gt;
+&lt;td&gt; #comment&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文档节点&lt;/td&gt;
+&lt;td&gt; #document&lt;/td&gt;
+&lt;td&gt; DOCUMENT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;nodeValue&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;节点类型&lt;/th&gt;
+&lt;th&gt; nodeValue值 &lt;/th&gt;
+&lt;th&gt; 示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;元素节点&lt;/td&gt;
+&lt;td&gt; null &lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;属性节点&lt;/td&gt;
+&lt;td&gt; 属性的值 &lt;/td&gt;
+&lt;td&gt; name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文本节点&lt;/td&gt;
+&lt;td&gt; 节点包含的文本 &lt;/td&gt;
+&lt;td&gt; 我是李璇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;注释节点&lt;/td&gt;
+&lt;td&gt; 注释的内容&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文档节点&lt;/td&gt;
+&lt;td&gt; null&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;nodeType&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;节点类型&lt;/th&gt;
+&lt;th&gt; nodeType值 &lt;/th&gt;
+&lt;th&gt; 示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;元素节点&lt;/td&gt;
+&lt;td&gt; 1&lt;/td&gt;
+&lt;td&gt; div&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;属性节点&lt;/td&gt;
+&lt;td&gt; 2 &lt;/td&gt;
+&lt;td&gt; name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文本节点&lt;/td&gt;
+&lt;td&gt; 3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;注释节点&lt;/td&gt;
+&lt;td&gt; 8&lt;/td&gt;
+&lt;td&gt; 我是李璇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文档节点&lt;/td&gt;
+&lt;td&gt; 9&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+</content>
+   </entry>
+   
+   <entry>
+     <title>Image对象</title>
+     <link href="https://github.com/sharonlx/javascript/image/2014/06/17/new-Image.html"/>
+     <updated>2014-06-17T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/javascript/image/2014/06/17/new-Image</id>
+     <content type="html">&lt;h3&gt;new Image() 的用法&lt;/h3&gt;
+
+&lt;p&gt;参考&lt;a href=&quot;http://blog.csdn.net/hdchangchang/article/details/9036511&quot;&gt;js的 new image()&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Image对象是HTML DOM 自带的对象，主要的作用是可以再浏览器缓存一张图片,使用方法如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    new Image(width, height); //width是指图片的宽度,height 是指图片的高度
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;图片对象具有的属性如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;border:number,图片的边框&lt;/li&gt;
+&lt;li&gt;align:left|right|top|middle|bottom 对齐方式&lt;/li&gt;
+&lt;li&gt;alt:string 替代文本&lt;/li&gt;
+&lt;li&gt;complete:boolean 当前img对象是否加载完成&lt;/li&gt;
+&lt;li&gt;src:string 当前img的源&lt;/li&gt;
+&lt;li&gt;hspace:pixels 图片的水平留白&lt;/li&gt;
+&lt;li&gt;vspace:pixels 图片的垂直留白&lt;/li&gt;
+&lt;li&gt;className: 样式名字&lt;/li&gt;
+&lt;li&gt;title: img的title&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;图片对象具有的事件如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;onload: 当图像装载完毕时调用的方法，此时complete为true&lt;/li&gt;
+&lt;li&gt;onabort: 用户放弃图像装载时调用的方法，此时complete为true&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;onerror: 在装载对象发生错误时调用的方法， 此时complete为true&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  var img=new Image();
+  img.border = &#39;3&#39;;
+  img.hspace = &#39;50&#39;;
+  img.vspace = &#39;50&#39;;      
+  img.onload=function(){alert(&quot;img is loaded&quot;)};
+  img.onerror=function(){alert(&quot;error!&quot;)};
+  img.src=&quot;http://source.qunar.com/site/images/wns/20140530_qunar_homepage_logo_100x70_4185.jpg&quot;;
+  function show(){alert(&quot;body is loaded&quot;);};
+  window.onload=show;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;由于浏览器会在创建的img对象complete后才出发window的onload，尽量避免在页面中创建大量的image对象。参考文章中提到，IE是先onload，后加载，经过测试好像所有浏览器都是先加载图片，然后onload。&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Clientheight Height Offsetheight</title>
+     <link href="https://github.com/sharonlx/2014/06/17/clientHeight-height-offsetHeight.html"/>
+     <updated>2014-06-17T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/2014/06/17/clientHeight-height-offsetHeight</id>
+     <content type="html">&lt;h3&gt;关于浏览器的各种高度&lt;/h3&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Javascript domReady</title>
+     <link href="https://github.com/sharonlx/javascript/jquery/2014/06/09/jquery-domready.html"/>
+     <updated>2014-06-09T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/javascript/jquery/2014/06/09/jquery-domready</id>
+     <content type="html">&lt;h3&gt;domready详解&lt;/h3&gt;
+
+&lt;p&gt;参考
+&lt;a href=&quot;http://www.alloyteam.com/2014/03/effect-js-css-and-img-event-of-domcontentloaded/&quot;&gt;JS、CSS以及img对DOMContentLoaded事件的影响&lt;/a&gt;、&lt;a href=&quot;http://www.cnblogs.com/hh54188/archive/2013/03/01/2939426.html&quot;&gt;从onload和DOMContentLoaded谈起&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;h4&gt;DOMContentLoaded 和 onload&lt;/h4&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;很多框架都自带时间domready,然后其他初始化的逻辑都放在这个事件的回调函数中。在说这个事件之前，我们先来说说&lt;em&gt;document&lt;/em&gt; 的 &lt;em&gt;DOMContentLoaded&lt;/em&gt; 和 &lt;em&gt;window&lt;/em&gt; 的&lt;em&gt;onload&lt;/em&gt;两个事件&lt;/p&gt;
+
+&lt;p&gt;**PS: onload方法是所有具有src属性的标签公有的事件，比如&lt;em&gt;img&lt;/em&gt;、&lt;em&gt;script&lt;/em&gt;、&lt;em&gt;window&lt;/em&gt;、&lt;em&gt;iframe&lt;/em&gt;、&lt;em&gt;embed&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;**PS: &lt;em&gt;document.readyState&lt;/em&gt; 有如下几种状态：&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;状态 &lt;/th&gt;
+&lt;th&gt;描述 &lt;/th&gt;
+&lt;th&gt; 其他&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;uninitialized&lt;/td&gt;
+&lt;td&gt; XML对象被产生，但是没有任何文件被加载&lt;/td&gt;
+&lt;td&gt;暂无法出现&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;loading&lt;/td&gt;
+&lt;td&gt; 加载其他资源，但是文档尚未开始解析&lt;/td&gt;
+&lt;td&gt; DOMContentLoaded事件触发之前文档的状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;interactive&lt;/td&gt;
+&lt;td&gt;除了image、flash、或者子frame这些资源未加载意外，其他资源都请求，并且标签已经全部解析好&lt;/td&gt;
+&lt;td&gt;DOMContentLoaded事件触发后，onload事件触发前&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;completed&lt;/td&gt;
+&lt;td&gt;文档的全部资源已经加载完毕&lt;/td&gt;
+&lt;td&gt;window.onload事件触发后&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;&lt;em&gt;DOMContentLoaded&lt;/em&gt; 事件默认情况下，不会等待样式表、图片和子页面的加载，而是当外链脚本全部执行完毕后就触发&lt;em&gt;DOMContentLoaded&lt;/em&gt;时间。此时&lt;em&gt;document&lt;/em&gt;对象的&lt;em&gt;readyState&lt;/em&gt;值为&lt;em&gt;interactive&lt;/em&gt;。&lt;/p&gt;
+
+&lt;p&gt;**PS:但是当script标签前有link标签来外链一个样式表时，无论实在head中还是body中，都会阻塞当前script的执行，script脚本会等待样式表加载完毕后再执行。&lt;/p&gt;
+
+&lt;p&gt;**PS:浏览器会同时请求css和js，但是会等到css加载完毕后在执行js&lt;/p&gt;
+
+&lt;p&gt;**PS:火狐浏览器即使script写在link标签前，也会先加载样式，然后再执行script&lt;/p&gt;
+
+&lt;p&gt;当页面的所有资源都加载完毕后，会触发&lt;em&gt;window.onlaod&lt;/em&gt;事件， 此时&lt;em&gt;document&lt;/em&gt;对象的&lt;em&gt;readyState&lt;/em&gt;值为&lt;em&gt;completed&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;h4&gt;jQuery的dom ready&lt;/h4&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;首先根据&lt;em&gt;document.readyState&lt;/em&gt;判断，是否为&lt;em&gt;completed&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;对非IE浏览器，挂载&lt;em&gt;DOMContentLoaded&lt;/em&gt; 和 降级处理的 &lt;em&gt;load&lt;/em&gt; 事件。&lt;/p&gt;
+
+&lt;p&gt;对于IE浏览器，由于有些属性，是必须在DOM解析完毕后才具有的，例如&lt;em&gt;doScroll&lt;/em&gt;所以可以轮训的判断改属性是否已有值&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Html结构</title>
+     <link href="https://github.com/sharonlx/html/2014/06/04/HTML.html"/>
+     <updated>2014-06-04T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/html/2014/06/04/HTML</id>
+     <content type="html">&lt;h4&gt;HTML 结构&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html class=&quot;no-js&quot; lang=&quot;&quot;&amp;gt;
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;
+        &amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&amp;gt;
+        &amp;lt;title&amp;gt;HTML5的标准文档结构&amp;lt;/title&amp;gt;
+        &amp;lt;meta name=&quot;Author&quot; content=&quot;sharon li&quot;&amp;gt;
+        &amp;lt;meta name=&quot;description&quot; content=&quot;a simple website&quot;&amp;gt;                &amp;lt;meta name=&quot;generator&quot; content=&quot;Sublime Text 2&quot;&amp;gt;
+        &amp;lt;meta name=&quot;keywords&quot; content=&quot;html5 html&quot;&amp;gt;
+        &amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&amp;gt;
+
+        &amp;lt;!-- Place favicon.ico and apple-touch-icon(s) in the root directory --&amp;gt;
+
+        &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;css/normalize.css&quot;&amp;gt;
+        &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&amp;gt;
+        &amp;lt;script src=&quot;js/vendor/modernizr-2.8.0.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;!--[if lt IE 8]&amp;gt;
+            &amp;lt;p class=&quot;browsehappy&quot;&amp;gt;You are using an &amp;lt;strong&amp;gt;outdated&amp;lt;/strong&amp;gt; browser. Please &amp;lt;a href=&quot;http://browsehappy.com/&quot;&amp;gt;upgrade your browser&amp;lt;/a&amp;gt; to improve your experience.&amp;lt;/p&amp;gt;
+        &amp;lt;![endif]--&amp;gt;
+
+        &amp;lt;!-- Add your site or application content here --&amp;gt;
+        &amp;lt;p&amp;gt;Hello world! This is HTML5 Boilerplate.&amp;lt;/p&amp;gt;
+
+        &amp;lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+        &amp;lt;script&amp;gt;window.jQuery || document.write(&#39;&amp;lt;script src=&quot;js/vendor/jquery-1.11.1.min.js&quot;&amp;gt;&amp;lt;\/script&amp;gt;&#39;)&amp;lt;/script&amp;gt;
+        &amp;lt;script src=&quot;js/plugins.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+        &amp;lt;script src=&quot;js/main.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+        &amp;lt;!-- Google Analytics: change UA-XXXXX-X to be your site&#39;s ID. --&amp;gt;
+        &amp;lt;script&amp;gt;
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src=&#39;//www.google-analytics.com/analytics.js&#39;;
+            r.parentNode.insertBefore(e,r)}(window,document,&#39;script&#39;,&#39;ga&#39;));
+            ga(&#39;create&#39;,&#39;UA-XXXXX-X&#39;);ga(&#39;send&#39;,&#39;pageview&#39;);
+        &amp;lt;/script&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>jQuery的Defered对象</title>
+     <link href="https://github.com/sharonlx/defered/jquery/2014/05/29/jquery-defered.html"/>
+     <updated>2014-05-29T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/defered/jquery/2014/05/29/jquery-defered</id>
+     <content type="html">&lt;h3&gt;[翻译]jQuery的Defered对象简介&lt;/h3&gt;
+
+&lt;p&gt;由于Jquery的Defered是基于CommonJS的Promise/A，所以先简单介绍一下Promise&lt;/p&gt;
+
+&lt;h4&gt;CommonJS Promise/A&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://wiki.commonjs.org/wiki/Promises/A&quot;&gt;原文地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5&gt;提案&lt;/h5&gt;
+
+&lt;p&gt;Promise是CommonJS提出的规范。一个邀约(promise)有三种状态unfulfiled,fulflled 和 failed。邀约只能从unfulfilled到fulfilled或者从unfulfilled到failed。这样可以避免其他负面影响，比如死循环调用。&lt;/p&gt;
+
+&lt;p&gt;Promise对象有一个then的方法属性，then的定义如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    then(fulfilledHandler, errorHandler, progressHandler)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当promise对象被填充完后会调用&lt;em&gt;fulfilledHandler&lt;/em&gt;,如果Promise对象failed，那么会触发&lt;em&gt;errorHandler&lt;/em&gt;方法。其中这三个参数是可选择，并且如果不可选必须是&lt;em&gt;function&lt;/em&gt;类型的参数，否则会被忽略。&lt;/p&gt;
+
+&lt;p&gt;当fulfilledHandler或者errorHandler回调函数完成后，then方法必须返回一个新的填充好的promise对象，这样才能实现promise的链式调用。从回调函数返回的值，将是then方法最终返回的promise对象的填充值，如果回调函数有异常，那么promise对象的状态将被设置为failed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    asyncComputeTheAnswerToEverything().then(addTwo).then(printResult, onError);// 44
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;一个可交互的promise对象，必须是可拓展的，所以应该支持下面几种方法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    get(properName);//获取promise对象中属性为properName的值，该方法返回一个promise对象
+    call(functionName, arg1, arg2);//调用functionName的方法，并且讲this设置为当前的promise对象
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4&gt;Defered API介绍&lt;/h4&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Javascript toString() </title>
+     <link href="https://github.com/sharonlx/javascript/2014/05/28/js-toString().html"/>
+     <updated>2014-05-28T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/javascript/2014/05/28/js-toString()</id>
+     <content type="html">&lt;h3&gt;toString()&lt;/h3&gt;
+
+&lt;h4&gt;object.toString()&lt;/h4&gt;
+
+&lt;p&gt;js中的对象都会从Object.prototype中继承了toString()方法。但是每个对象toString()的行为是有所差异的.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;toString()结果&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Boolean&lt;/td&gt;
+&lt;td&gt;&quot;true&quot; | &quot;false&quot;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://jsfiddle.net/leexuanr/3HyZd/&quot;&gt;示例&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Number&lt;/td&gt;
+&lt;td&gt;NaN | &quot;Number本身&quot;&lt;/td&gt;
+&lt;td&gt; &lt;a href=&quot;http://jsfiddle.net/leexuanr/3HyZd/&quot;&gt;示例&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;function&lt;/td&gt;
+&lt;td&gt;function body&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://jsfiddle.net/leexuanr/3HyZd/&quot;&gt;示例&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Object&lt;/td&gt;
+&lt;td&gt;&quot;[object Object]&quot;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://jsfiddle.net/leexuanr/3HyZd/&quot;&gt;示例&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Date&lt;/td&gt;
+&lt;td&gt;date日期字符串&lt;/td&gt;
+&lt;td&gt;var d = new Date();d.toString();|&lt;a href=&quot;http://jsfiddle.net/leexuanr/3HyZd/&quot;&gt;示例&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RegExp&lt;/td&gt;
+&lt;td&gt;RegExp的字符串&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://jsfiddle.net/leexuanr/3HyZd/&quot;&gt;示例&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;数组元素每个toString()后的结果用&quot;,&quot;合并&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://jsfiddle.net/leexuanr/3HyZd/&quot;&gt;示例&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Error&lt;/td&gt;
+&lt;td&gt;&quot;Error: message toString()的结果&quot;&lt;/td&gt;
+&lt;td&gt;new Error(new Boolean(123))// Error: true&lt;a href=&quot;http://jsfiddle.net/leexuanr/3HyZd/&quot;&gt;示例&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h4&gt;Object.prototype.toString()&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/ziyunfei/archive/2012/11/05/2754156.html&quot;&gt;[zz]参考&lt;/a&gt;
+&lt;a href=&quot;https://app.yinxiang.com/shard/s9/view/ff1bba19-346f-405e-b4da-4314aba40d53?csrfBusterToken=U%3D1109bf%3AP%3D%2F%3AE%3D146423c56dc%3AS%3D683b19549ddbb726e832927c99a30b2d#st=p&amp;amp;n=ff1bba19-346f-405e-b4da-4314aba40d53&quot;&gt;印象笔记&lt;/a&gt;&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Javascript操作cookie</title>
+     <link href="https://github.com/sharonlx/cookie/javascript/2014/05/27/js-cookie.html"/>
+     <updated>2014-05-27T00:00:00+08:00</updated>
+     <id>https://github.com/sharonlx/cookie/javascript/2014/05/27/js-cookie</id>
+     <content type="html">&lt;h1&gt;JS COOKIE 操作介绍&lt;/h1&gt;
+
+&lt;h3&gt;cookie介绍&lt;/h3&gt;
+
+&lt;p&gt;简单来说cookie就是网站服务器在你电脑上放置的一个文件，但是如果你找到这个文件，会发现里面的内容是经过编码加密过得，所以需要工具才能转换成明文。&lt;/p&gt;
+
+&lt;p&gt;很多网站都会在为用户种cookie，以用来实现定制化服务，如购物车、搜索记录等等功能。&lt;/p&gt;
+
+&lt;h3&gt;cookie组成&lt;/h3&gt;
+
+&lt;p&gt;cookie的组成没有明确规范，但是一般都会包含下面几个属性：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;domain&lt;/em&gt; 域&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;name&lt;/em&gt; cookie的名称&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;value&lt;/em&gt; cookie的值&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;expires&lt;/em&gt; 过期时间&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;path&lt;/em&gt; 路径 默认为 &quot;/&quot; 根目录&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;max-age&lt;/em&gt; &lt;strong&gt;IE不支持，使用expires&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;cookie的个数和大小&lt;/h3&gt;
+
+&lt;p&gt;不同浏览器能够允许同一个域下的cookie个数不同，而且对cookie的大小限制也不同，下面是针对各个浏览器的进行的统计&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;                   &lt;/th&gt;
+&lt;th&gt; IE6.0 &lt;/th&gt;
+&lt;th&gt; IE7.0\IE8.0   &lt;/th&gt;
+&lt;th&gt; Opera &lt;/th&gt;
+&lt;th&gt; Firefox &lt;/th&gt;
+&lt;th&gt; Safari &lt;/th&gt;
+&lt;th&gt; Chrome &lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt; cookie数（域）        &lt;/td&gt;
+&lt;td&gt; 20    &lt;/td&gt;
+&lt;td&gt; 50            &lt;/td&gt;
+&lt;td&gt; 30    &lt;/td&gt;
+&lt;td&gt; 50      &lt;/td&gt;
+&lt;td&gt; 没有限制 &lt;/td&gt;
+&lt;td&gt; 53    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; cookie总大小(字节)   &lt;/td&gt;
+&lt;td&gt; 4095  &lt;/td&gt;
+&lt;td&gt; 4095          &lt;/td&gt;
+&lt;td&gt; 4096  &lt;/td&gt;
+&lt;td&gt; 4097    &lt;/td&gt;
+&lt;td&gt; 4097   &lt;/td&gt;
+&lt;td&gt; 4097   &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;如果超出个数限制，IE和opera会利用先进先出的原则删除之前的cookie
+cookie个数控制在20~30个， 大小控制在4k(4000)字节， 因为每次发送请求的&lt;em&gt;header&lt;/em&gt;都会包括这些cookie，占用带宽。&lt;/p&gt;
+
+&lt;h3&gt;javascript 操作cookie&lt;/h3&gt;
+
+&lt;h4&gt;赋值&lt;/h4&gt;
+
+&lt;p&gt;在js中，是通过设置document.cookie来操作cookie的。cookie是通过&lt;em&gt;key/value&lt;/em&gt;来进行存储的，如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    document.cookie=&quot;usreId=123&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果同时存储多个键值对，可以用&lt;em&gt;；&lt;/em&gt;隔开，如&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    docuemnt.cookie=&quot;userId=13421;userLevel=5&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;在cookie的key/value中不能出现&lt;em&gt;&quot;;&quot;&lt;/em&gt;、&lt;em&gt;&quot;,&quot;&lt;/em&gt;、&lt;em&gt;&quot;=&quot;&lt;/em&gt;等 &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;value是字符串类型，会默认调用&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;cookie在存储时为了避免value出现非法字符，可以对value使用&lt;em&gt;encodeURIComponent()&lt;/em&gt;方法来编码，如果使用编码后，取值时必须使用&lt;em&gt;decodeURIComponent()&lt;/em&gt;进行解码才行。&lt;/p&gt;
+
+&lt;p&gt;虽然是通过对document.cookie进行直接赋值，但是实际上每次赋值并不会覆盖掉之前的值，如:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    document.cookie = &quot;userId=1&quot;;
+    document.cookie = &quot;userLevel=2&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;相当于&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    document.addcookie(&quot;userId=1&quot;);
+    document.addcookie(&quot;userLevel=2&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;cookie添加时，即使名称相同，如果域和路径不同，那么也会额外再添加一个，所以为了读取到准确的cookie，进行cookie操作时，对同一个cookie确保设置的域名和路径是正确的。&lt;/p&gt;
+
+&lt;h4&gt;取值&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;    var cookieArr = document.cookie;//userId=1;userLevel=1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;document.cookie&lt;/em&gt; 的值是类似&lt;em&gt;key=value;key1=value;key2=value&lt;/em&gt; 这种形式的字符串，所以在取值的时候必须自己去解析。&lt;/p&gt;
+
+&lt;h4&gt;删除cookie&lt;/h4&gt;
+
+&lt;p&gt;由于为&lt;em&gt;cookie&lt;/em&gt;赋值时value的值即使设置为Null,但是由于cookie会默认将value转换为字符串，所以删除cookie不能通过这种方式。而是通过&lt;em&gt;有效期expires&lt;/em&gt;来实现。&lt;/p&gt;
+
+&lt;p&gt;如果设置cookie时，没有设置&lt;em&gt;expires&lt;/em&gt;，那么默认是设置为sesstion有效时间，也就是会话结束后，cookie就消失了。&lt;/p&gt;
+
+&lt;p&gt;如果设置了cookie的有效期，那么在有效期时间内，cookie都不会消失&lt;/p&gt;
+
+&lt;p&gt;如果要删除cookie，可以为cookie设置一个过去的时间点，那么cookie就会自动失效了&lt;/p&gt;
+
+&lt;h4&gt;cookie操作代码&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;    function getCookie(objName){//获取指定名称的cookie的值
+
+        var arrStr = document.cookie.split(&quot;; &quot;);
+
+        for(var i = 0;i &amp;lt; arrStr.length;i ++){   
+            var temp = arrStr[i].split(&quot;=&quot;);
+            if(temp[0] == objName) return unescape(temp[1]);
+        }    
+    }
+    function setCookie(name,value，expires, domain, path)//两个参数，一个是cookie的名子，一个是值
+    {    
+
+        var str = &#39;&#39;;
+        str += name + &quot;=&quot;+ escape (value) ;
+        if (typeof expires === &quot;object&quot;) {
+            str += &quot;;expires=&quot; + expires.toGMTString();
+        }
+        else if (typeof expires === &#39;number&#39;) {
+            var Days = expires; //此 cookie 将被保存 30 天
+            var exp = new Date();    //new Date(&quot;December 31, 9998&quot;);
+            exp.setTime(exp.getTime() + Days*24*60*60*1000);
+            str += &quot;;expires=&quot; + exp.toGMTString();
+        }
+        else {
+        }
+        domain &amp;amp;&amp;amp; str += &#39;;domain=&#39; + domain;
+        path &amp;amp;&amp;amp; str ++ &#39;;path=&#39; + path
+    }
+    function deleteCookie(name) {
+        var exp = new Date();106     
+        exp.setTime(exp.getTime() - 1);
+        var cval=getCookie(name);
+        if(cval!=null) document.cookie= name + &quot;=&quot;+cval+&quot;;expires=&quot;+exp.toGMTString();
+    }
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+   </entry>
+   
+ 
+</feed>

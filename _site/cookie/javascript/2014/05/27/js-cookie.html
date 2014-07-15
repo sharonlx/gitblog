@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    **
+    *
+    * Author:         PIZn
+    * Contact:        pizner@gmail.com
+    * Theme Name:     Block Rude
+    * Version:        1.0
+    *
+    **
+  -->
+  <meta charset="utf-8" />
+  <title>Javascript操作cookie | D大调较交响乐</title>
+  <meta name="generator" content="Jekyll" />
+  <meta name="author" content="sharonlx" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <header class="head">
+	<div class="header fn-clear">
+		<section class="header-cnt fn-clear">
+			<div class="logo">
+				<div class="logo-cnt">
+				 	<h1><a href="/">D大调交响乐</a></h1>
+				 	<h2>年年不忘必有回响</h2>
+				</div>
+			</div>
+			<nav class="nav">
+				<ul>
+					<li><a href="/" >首页</a></li>
+					<li><a href="/archives.html" >归档</a></li>
+					<li><a href="/contact.html" >关于</a></li>
+					<li><a href="/atom.xml" target="_blank" >订阅</a></li>
+				</ul>
+			</nav>
+		</section>
+	</div>
+</header> 
+  <section id="content">
+    <article id="contenter">
+      <section class="content">
+	<div class="content-cnt fn-clear">
+		<div class="main fn-clear">
+			<article class="entry">
+				<h1 class="title">Javascript操作cookie</h1>
+               	<p class="meta"><time class="date" pubdate="2014-05-27">27 May 2014</time> By <a href="/contact.html" class="author" title="author">sharonlx</a><g:plusone size="small"></g:plusone></p>
+               	<p class="description"></p>
+ 			 	<h1>JS COOKIE 操作介绍</h1>
+
+<h3>cookie介绍</h3>
+
+<p>简单来说cookie就是网站服务器在你电脑上放置的一个文件，但是如果你找到这个文件，会发现里面的内容是经过编码加密过得，所以需要工具才能转换成明文。</p>
+
+<p>很多网站都会在为用户种cookie，以用来实现定制化服务，如购物车、搜索记录等等功能。</p>
+
+<h3>cookie组成</h3>
+
+<p>cookie的组成没有明确规范，但是一般都会包含下面几个属性：</p>
+
+<ul>
+<li><em>domain</em> 域</li>
+<li><em>name</em> cookie的名称</li>
+<li><em>value</em> cookie的值</li>
+<li><em>expires</em> 过期时间</li>
+<li><em>path</em> 路径 默认为 "/" 根目录</li>
+<li><em>max-age</em> <strong>IE不支持，使用expires</strong></li>
+</ul>
+
+
+<h3>cookie的个数和大小</h3>
+
+<p>不同浏览器能够允许同一个域下的cookie个数不同，而且对cookie的大小限制也不同，下面是针对各个浏览器的进行的统计</p>
+
+<table>
+<thead>
+<tr>
+<th>                   </th>
+<th> IE6.0 </th>
+<th> IE7.0\IE8.0   </th>
+<th> Opera </th>
+<th> Firefox </th>
+<th> Safari </th>
+<th> Chrome </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> cookie数（域）        </td>
+<td> 20    </td>
+<td> 50            </td>
+<td> 30    </td>
+<td> 50      </td>
+<td> 没有限制 </td>
+<td> 53    </td>
+</tr>
+<tr>
+<td> cookie总大小(字节)   </td>
+<td> 4095  </td>
+<td> 4095          </td>
+<td> 4096  </td>
+<td> 4097    </td>
+<td> 4097   </td>
+<td> 4097   </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>如果超出个数限制，IE和opera会利用先进先出的原则删除之前的cookie
+cookie个数控制在20~30个， 大小控制在4k(4000)字节， 因为每次发送请求的<em>header</em>都会包括这些cookie，占用带宽。</p>
+
+<h3>javascript 操作cookie</h3>
+
+<h4>赋值</h4>
+
+<p>在js中，是通过设置document.cookie来操作cookie的。cookie是通过<em>key/value</em>来进行存储的，如：</p>
+
+<pre><code>    document.cookie="usreId=123";
+</code></pre>
+
+<p>如果同时存储多个键值对，可以用<em>；</em>隔开，如</p>
+
+<pre><code>    docuemnt.cookie="userId=13421;userLevel=5"
+</code></pre>
+
+<p><strong>在cookie的key/value中不能出现<em>";"</em>、<em>","</em>、<em>"="</em>等 </strong></p>
+
+<p><strong>value是字符串类型，会默认调用</strong></p>
+
+<p>cookie在存储时为了避免value出现非法字符，可以对value使用<em>encodeURIComponent()</em>方法来编码，如果使用编码后，取值时必须使用<em>decodeURIComponent()</em>进行解码才行。</p>
+
+<p>虽然是通过对document.cookie进行直接赋值，但是实际上每次赋值并不会覆盖掉之前的值，如:</p>
+
+<pre><code>    document.cookie = "userId=1";
+    document.cookie = "userLevel=2";
+</code></pre>
+
+<p>相当于</p>
+
+<pre><code>    document.addcookie("userId=1");
+    document.addcookie("userLevel=2");
+</code></pre>
+
+<p>cookie添加时，即使名称相同，如果域和路径不同，那么也会额外再添加一个，所以为了读取到准确的cookie，进行cookie操作时，对同一个cookie确保设置的域名和路径是正确的。</p>
+
+<h4>取值</h4>
+
+<pre><code>    var cookieArr = document.cookie;//userId=1;userLevel=1
+</code></pre>
+
+<p><em>document.cookie</em> 的值是类似<em>key=value;key1=value;key2=value</em> 这种形式的字符串，所以在取值的时候必须自己去解析。</p>
+
+<h4>删除cookie</h4>
+
+<p>由于为<em>cookie</em>赋值时value的值即使设置为Null,但是由于cookie会默认将value转换为字符串，所以删除cookie不能通过这种方式。而是通过<em>有效期expires</em>来实现。</p>
+
+<p>如果设置cookie时，没有设置<em>expires</em>，那么默认是设置为sesstion有效时间，也就是会话结束后，cookie就消失了。</p>
+
+<p>如果设置了cookie的有效期，那么在有效期时间内，cookie都不会消失</p>
+
+<p>如果要删除cookie，可以为cookie设置一个过去的时间点，那么cookie就会自动失效了</p>
+
+<h4>cookie操作代码</h4>
+
+<pre><code>    function getCookie(objName){//获取指定名称的cookie的值
+
+        var arrStr = document.cookie.split("; ");
+
+        for(var i = 0;i &lt; arrStr.length;i ++){   
+            var temp = arrStr[i].split("=");
+            if(temp[0] == objName) return unescape(temp[1]);
+        }    
+    }
+    function setCookie(name,value，expires, domain, path)//两个参数，一个是cookie的名子，一个是值
+    {    
+
+        var str = '';
+        str += name + "="+ escape (value) ;
+        if (typeof expires === "object") {
+            str += ";expires=" + expires.toGMTString();
+        }
+        else if (typeof expires === 'number') {
+            var Days = expires; //此 cookie 将被保存 30 天
+            var exp = new Date();    //new Date("December 31, 9998");
+            exp.setTime(exp.getTime() + Days*24*60*60*1000);
+            str += ";expires=" + exp.toGMTString();
+        }
+        else {
+        }
+        domain &amp;&amp; str += ';domain=' + domain;
+        path &amp;&amp; str ++ ';path=' + path
+    }
+    function deleteCookie(name) {
+        var exp = new Date();106     
+        exp.setTime(exp.getTime() - 1);
+        var cval=getCookie(name);
+        if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+    }
+</code></pre>
+
+                <nav class="pagination-link">
+                    
+                    
+                    <a class="next" href="/javascript/2014/05/28/js-toString().html" rel="bookmark">Javascript toString() &nbsp;&raquo;</a>
+                    
+                 </nav>
+			</article><!-- .entry -->		
+		</div>
+		<div class="aside fn-clear">
+			<div class="box fn-clear">
+	<img src="/images/psb.jpg" alt="about theme"/>
+	<p></p>
+</div>
+		</div>
+	</div>
+</section>
+    </article>
+  </section>
+    <footer class="foot">
+	<div class="foot-cnt fn-clear">
+		<div class="foot-cnt-det fn-clear">
+			<article class="blogroll">
+				<h4 class="title">友情链接</h4>
+				<!-- <ul>
+					<li>&#8227;<a href="http://github.com/sharonlx">www.pizn.me</a></li>
+					<li>&#8227;<a href="http://www.pizn.net">www.pizn.net</a></li>
+					<li>&#8227;<a href="http://www.jekyllrb.com">www.jekyllrb.com</a></li>
+				</ul> -->
+			</article>
+			<article class="about">
+				<h4 class="title">关于我</h4>
+				<p></p>
+			</article>
+			<article class="follow">
+				<h4 class="title">关注</h4>
+				<ul>
+					<li><a href="https://github.com/sharonlx" class="ico-github" target="_blank">github</a></li>
+					<li><a href="/atom.xml" class="ico-rss" target="_blank">rss</a></li>
+					<!-- <li><a href="#" class="ico-linkedin">linkedin</a></li> -->
+					<li><a href="mailto:ixuan.lee@gmail.com" class="ico-google">google</a></li>
+					<!-- <li><a href="#" class="ico-flickr">flickr</a></li> -->
+					<!-- <li><a href="" class="ico-twitter">twitter</a></li> -->
+					<!-- <li><a href="#" class="ico-facebook">facebook</a></li> -->
+					<!-- <li><a href="#" class="ico-vimeo">vimeo</a></li> -->
+				</ul>
+			</article>
+		</div>
+	</div>
+	<div class="foot-btn">
+		<div class="foot-btn-det">
+			<p class="copyright">Copyright © 2011–2012 PIZn All rights reserved.</p>
+			<p class="author">Powered by <a href="http://www.jekyllrb.com">Jekyll</a>. Design by <a href="http://www.pizn.net">PIZn</a>.</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

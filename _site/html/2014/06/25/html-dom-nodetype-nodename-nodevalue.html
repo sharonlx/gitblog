@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    **
+    *
+    * Author:         PIZn
+    * Contact:        pizner@gmail.com
+    * Theme Name:     Block Rude
+    * Version:        1.0
+    *
+    **
+  -->
+  <meta charset="utf-8" />
+  <title>nodeType和nodeValue  | D大调较交响乐</title>
+  <meta name="generator" content="Jekyll" />
+  <meta name="author" content="sharonlx" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <header class="head">
+	<div class="header fn-clear">
+		<section class="header-cnt fn-clear">
+			<div class="logo">
+				<div class="logo-cnt">
+				 	<h1><a href="/">D大调交响乐</a></h1>
+				 	<h2>年年不忘必有回响</h2>
+				</div>
+			</div>
+			<nav class="nav">
+				<ul>
+					<li><a href="/" >首页</a></li>
+					<li><a href="/archives.html" >归档</a></li>
+					<li><a href="/contact.html" >关于</a></li>
+					<li><a href="/atom.xml" target="_blank" >订阅</a></li>
+				</ul>
+			</nav>
+		</section>
+	</div>
+</header> 
+  <section id="content">
+    <article id="contenter">
+      <section class="content">
+	<div class="content-cnt fn-clear">
+		<div class="main fn-clear">
+			<article class="entry">
+				<h1 class="title">nodeType和nodeValue </h1>
+               	<p class="meta"><time class="date" pubdate="2014-06-25">25 Jun 2014</time> By <a href="/contact.html" class="author" title="author">sharonlx</a><g:plusone size="small"></g:plusone></p>
+               	<p class="description"></p>
+ 			 	<h3>HTML DOM 节点的nodeType nodeName nodeValue</h3>
+
+<p><a href="http://jsfiddle.net/leexuanr/w5XwH/5/">代码</a></p>
+
+<ul>
+<li>nodeName 属性含有某个节点的名称</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th>节点类型</th>
+<th> nodeName值 </th>
+<th> 示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元素节点</td>
+<td> 元素的标签名称 </td>
+<td> DIV</td>
+</tr>
+<tr>
+<td>属性节点</td>
+<td> 属性的名称 </td>
+<td></td>
+</tr>
+<tr>
+<td>文本节点</td>
+<td> #text </td>
+<td></td>
+</tr>
+<tr>
+<td>注释节点</td>
+<td> #comment</td>
+<td></td>
+</tr>
+<tr>
+<td>文档节点</td>
+<td> #document</td>
+<td> DOCUMENT</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>nodeValue</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th>节点类型</th>
+<th> nodeValue值 </th>
+<th> 示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元素节点</td>
+<td> null </td>
+<td></td>
+</tr>
+<tr>
+<td>属性节点</td>
+<td> 属性的值 </td>
+<td> name</td>
+</tr>
+<tr>
+<td>文本节点</td>
+<td> 节点包含的文本 </td>
+<td> 我是李璇</td>
+</tr>
+<tr>
+<td>注释节点</td>
+<td> 注释的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>文档节点</td>
+<td> null</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>nodeType</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th>节点类型</th>
+<th> nodeType值 </th>
+<th> 示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元素节点</td>
+<td> 1</td>
+<td> div</td>
+</tr>
+<tr>
+<td>属性节点</td>
+<td> 2 </td>
+<td> name</td>
+</tr>
+<tr>
+<td>文本节点</td>
+<td> 3</td>
+<td></td>
+</tr>
+<tr>
+<td>注释节点</td>
+<td> 8</td>
+<td> 我是李璇</td>
+</tr>
+<tr>
+<td>文档节点</td>
+<td> 9</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+                <nav class="pagination-link">
+                    
+                    <a class="prev" href="/javascript/image/2014/06/17/new-Image.html" rel="bookmark">&laquo;&nbsp;Image对象</a>
+                    
+                    
+                    <a class="next" href="/mac/iterm2/2014/06/25/mac-item2-zsh-and-ohmyzsh.html" rel="bookmark">Iterm2和zsh&nbsp;&raquo;</a>
+                    
+                 </nav>
+			</article><!-- .entry -->		
+		</div>
+		<div class="aside fn-clear">
+			<div class="box fn-clear">
+	<img src="/images/psb.jpg" alt="about theme"/>
+	<p></p>
+</div>
+		</div>
+	</div>
+</section>
+    </article>
+  </section>
+    <footer class="foot">
+	<div class="foot-cnt fn-clear">
+		<div class="foot-cnt-det fn-clear">
+			<article class="blogroll">
+				<h4 class="title">友情链接</h4>
+				<!-- <ul>
+					<li>&#8227;<a href="http://github.com/sharonlx">www.pizn.me</a></li>
+					<li>&#8227;<a href="http://www.pizn.net">www.pizn.net</a></li>
+					<li>&#8227;<a href="http://www.jekyllrb.com">www.jekyllrb.com</a></li>
+				</ul> -->
+			</article>
+			<article class="about">
+				<h4 class="title">关于我</h4>
+				<p></p>
+			</article>
+			<article class="follow">
+				<h4 class="title">关注</h4>
+				<ul>
+					<li><a href="https://github.com/sharonlx" class="ico-github" target="_blank">github</a></li>
+					<li><a href="/atom.xml" class="ico-rss" target="_blank">rss</a></li>
+					<!-- <li><a href="#" class="ico-linkedin">linkedin</a></li> -->
+					<li><a href="mailto:ixuan.lee@gmail.com" class="ico-google">google</a></li>
+					<!-- <li><a href="#" class="ico-flickr">flickr</a></li> -->
+					<!-- <li><a href="" class="ico-twitter">twitter</a></li> -->
+					<!-- <li><a href="#" class="ico-facebook">facebook</a></li> -->
+					<!-- <li><a href="#" class="ico-vimeo">vimeo</a></li> -->
+				</ul>
+			</article>
+		</div>
+	</div>
+	<div class="foot-btn">
+		<div class="foot-btn-det">
+			<p class="copyright">Copyright © 2011–2012 PIZn All rights reserved.</p>
+			<p class="author">Powered by <a href="http://www.jekyllrb.com">Jekyll</a>. Design by <a href="http://www.pizn.net">PIZn</a>.</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
